@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fila Zero</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Cardápio</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_card">Cartão</string>
+    <string name="title_profile">Perfil</string>
 </resources>
