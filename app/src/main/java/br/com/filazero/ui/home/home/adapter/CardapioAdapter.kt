@@ -11,66 +11,11 @@ import com.bumptech.glide.Glide
 
 class CardapioAdapter : RecyclerView.Adapter<CardapioAdapter.ProdutoViewHolder>() {
 
-    var listaProduto = listOf(
-        Produto(
-            "Produto 1",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ),
-        Produto(
-            "Produto 2",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ),
-        Produto(
-            "Produto depois do 2",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ), Produto(
-            "Produto 3",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ),
-        Produto(
-            "Produto 4",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ),
-        Produto(
-            "Produto 5",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ), Produto(
-            "Produto 6",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ),
-        Produto(
-            "Produto 7",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ),
-        Produto(
-            "Produto 8",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        ),
-        Produto(
-            "Produto 9",
-            "Descricao do produto 1",
-            "https://www.refrescofit.com.br/wp-content/uploads/2018/08/Como-decorar-bebidas-mais-bonitas-1030x686.jpg",
-            "R$ 19,99"
-        )
-    )
+    var listaProduto = listOf<Produto>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutoViewHolder {
         val view = LayoutInflater.from(parent.context)

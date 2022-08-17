@@ -5,4 +5,5 @@ data class Produto(
     val descricao: String,
     val imagem: String,
     val preco: String,
+    val categoria: String,
 )

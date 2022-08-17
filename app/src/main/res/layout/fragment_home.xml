@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.home.HomeFragment">
 
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerProductFilter"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
@@ -14,7 +24,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerProductFilter"
         tools:listitem="@layout/item_cardapio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

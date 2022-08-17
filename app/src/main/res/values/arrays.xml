@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="product_filter" >
+        <item>Todos os produtos</item>
+        <item>Bebidas</item>
+        <item>Comidas</item>
+        <item>Sobremesas</item>
+    </string-array>
+</resources>
