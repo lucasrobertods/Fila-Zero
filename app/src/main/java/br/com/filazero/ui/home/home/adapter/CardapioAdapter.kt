@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.filazero.R
 import br.com.filazero.databinding.ItemCardapioBinding
+import br.com.filazero.extensions.toCurrency
 import br.com.filazero.model.Produto
 import com.bumptech.glide.Glide
 
@@ -33,7 +34,7 @@ class CardapioAdapter : RecyclerView.Adapter<CardapioAdapter.ProdutoViewHolder>(
                 Glide.with(context).load(item.imagem).into(binding.ivProduct)
                 binding.tvName.text = item.nome
                 binding.tvDescription.text = item.descricao
-                binding.tvPrice.text = item.preco
+                binding.tvPrice.text = item.preco.toCurrency()
                 setOnClickListener {
                     onItemClick?.invoke(item)
                 }

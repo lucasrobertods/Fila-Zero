@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import br.com.filazero.R
 import br.com.filazero.databinding.FragmentCartBinding
+import br.com.filazero.extensions.toCurrency
 import br.com.filazero.ui.home.cart.adapter.CartAdapter
 
 class CartFragment : Fragment() {
@@ -18,7 +20,7 @@ class CartFragment : Fragment() {
     private val adapter: CartAdapter by lazy {
         CartAdapter().apply {
             onItemClick = {
-                CartManager.listaCarrinho.remove(it)""
+                CartManager.listaCarrinho.remove(it)
                 Toast.makeText(context, "Removido com sucesso!", Toast.LENGTH_SHORT).show()
                 updateList()
             }
@@ -47,10 +49,16 @@ class CartFragment : Fragment() {
 
     private fun updateList() {
         adapter.listaCarrinho = CartManager.listaCarrinho
+        binding.tvTotal.text = getString(R.string.cart_fragment_total, CartManager.getAmount().toCurrency())
     }
 
     private fun setupView() {
         binding.recyclerView.adapter = adapter
+        binding.btnFinalizar.setOnClickListener {
+            CartManager.listaCarrinho = mutableListOf()
+            updateList()
+            Toast.makeText(context, "Seu pedido está sendo preparado!", Toast.LENGTH_SHORT).show()
+        }
         updateList()
     }
 

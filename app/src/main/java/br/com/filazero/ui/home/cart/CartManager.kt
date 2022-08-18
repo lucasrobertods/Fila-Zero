@@ -6,4 +6,8 @@ object CartManager {
 
     var listaCarrinho: MutableList<Produto> = mutableListOf()
 
+    fun getAmount() = listaCarrinho.sumOf {
+        it.preco
+    }
+
 }
