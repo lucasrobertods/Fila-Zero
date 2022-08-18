@@ -6,4 +6,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_card">Cartão</string>
     <string name="title_profile">Perfil</string>
+    <string name="title_cart">Carrinho</string>
 </resources>
