@@ -1,4 +1,4 @@
-package br.com.filazero.ui.home.home.adapter
+package br.com.filazero.ui.home.cart.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +9,10 @@ import br.com.filazero.databinding.ItemCardapioBinding
 import br.com.filazero.model.Produto
 import com.bumptech.glide.Glide
 
-class CardapioAdapter : RecyclerView.Adapter<CardapioAdapter.ProdutoViewHolder>() {
+class CartAdapter : RecyclerView.Adapter<CartAdapter.ProdutoViewHolder>() {
 
     var onItemClick: ((Produto) -> Unit)? = null
-    var listaProduto = listOf<Produto>()
+    var listaCarrinho = listOf<Produto>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -20,11 +20,11 @@ class CardapioAdapter : RecyclerView.Adapter<CardapioAdapter.ProdutoViewHolder>(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutoViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_cardapio, parent, false)
+            .inflate(R.layout.item_cart, parent, false)
         return ProdutoViewHolder(view)
     }
 
-    override fun getItemCount() = listaProduto.size
+    override fun getItemCount() = listaCarrinho.size
 
     inner class ProdutoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemCardapioBinding.bind(itemView)
@@ -42,7 +42,7 @@ class CardapioAdapter : RecyclerView.Adapter<CardapioAdapter.ProdutoViewHolder>(
     }
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
-        holder.bind(listaProduto[position])
+        holder.bind(listaCarrinho[position])
     }
 
 }

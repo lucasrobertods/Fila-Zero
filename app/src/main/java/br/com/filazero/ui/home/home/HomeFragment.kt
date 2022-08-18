@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import br.com.filazero.R
 import br.com.filazero.databinding.FragmentHomeBinding
 import br.com.filazero.model.Produto
+import br.com.filazero.ui.home.cart.CartManager
 import br.com.filazero.ui.home.home.adapter.CardapioAdapter
 
 class HomeFragment : Fragment() {
@@ -21,7 +21,12 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val adapter: CardapioAdapter by lazy {
-        CardapioAdapter()
+        CardapioAdapter().apply {
+            onItemClick = {
+                CartManager.listaCarrinho.add(it)
+                Toast.makeText(context, "Adicionado com sucesso!", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     var lista = listOf(

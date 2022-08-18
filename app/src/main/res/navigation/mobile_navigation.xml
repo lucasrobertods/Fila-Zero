@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_cart"
-        android:name="br.com.filazero.ui.home.dashboard.DashboardFragment"
+        android:name="br.com.filazero.ui.home.cart.CartFragment"
         android:label="@string/title_cart"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_cart" />
 
     <fragment
         android:id="@+id/navigation_profile"
