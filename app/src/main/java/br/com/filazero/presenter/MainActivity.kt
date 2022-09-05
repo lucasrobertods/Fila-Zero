@@ -1,4 +1,4 @@
-package br.com.filazero.ui.home
+package br.com.filazero.presenter
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +10,7 @@ import br.com.filazero.R
 import br.com.filazero.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomeActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 

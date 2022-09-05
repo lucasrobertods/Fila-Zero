@@ -1,4 +1,4 @@
-package br.com.filazero.ui.home.cart
+package br.com.filazero.presenter.cart
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import br.com.filazero.R
 import br.com.filazero.databinding.FragmentCartBinding
 import br.com.filazero.extensions.toCurrency
-import br.com.filazero.ui.home.cart.adapter.CartAdapter
+import br.com.filazero.presenter.cart.adapter.CartAdapter
 
 class CartFragment : Fragment() {
 

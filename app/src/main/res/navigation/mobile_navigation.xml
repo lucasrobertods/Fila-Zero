@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="br.com.filazero.ui.home.home.HomeFragment"
+        android:name="br.com.filazero.presenter.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_cart"
-        android:name="br.com.filazero.ui.home.cart.CartFragment"
+        android:name="br.com.filazero.presenter.cart.CartFragment"
         android:label="@string/title_cart"
         tools:layout="@layout/fragment_cart" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="br.com.filazero.ui.home.profile.ProfileFragment"
+        android:name="br.com.filazero.presenter.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

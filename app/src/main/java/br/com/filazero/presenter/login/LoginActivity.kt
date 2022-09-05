@@ -1,11 +1,11 @@
-package br.com.filazero.ui.login
+package br.com.filazero.presenter.login
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.filazero.R
 import br.com.filazero.databinding.ActivityLoginBinding
-import br.com.filazero.ui.home.HomeActivity
+import br.com.filazero.presenter.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupView() {
         binding.btnEntrar.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

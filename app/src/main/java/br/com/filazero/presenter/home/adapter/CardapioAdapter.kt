@@ -1,4 +1,4 @@
-package br.com.filazero.ui.home.home.adapter
+package br.com.filazero.presenter.home.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.filazero.R
 import br.com.filazero.databinding.ItemCardapioBinding
 import br.com.filazero.extensions.toCurrency
-import br.com.filazero.model.Produto
+import br.com.filazero.domain.model.Produto
 import com.bumptech.glide.Glide
 
 class CardapioAdapter : RecyclerView.Adapter<CardapioAdapter.ProdutoViewHolder>() {

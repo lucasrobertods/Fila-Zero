@@ -1,6 +1,6 @@
-package br.com.filazero.ui.home.cart
+package br.com.filazero.presenter.cart
 
-import br.com.filazero.model.Produto
+import br.com.filazero.domain.model.Produto
 
 object CartManager {
 

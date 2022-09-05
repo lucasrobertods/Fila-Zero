@@ -1,4 +1,6 @@
-package br.com.filazero.model
+package br.com.filazero.domain.model
+
+import java.io.Serializable
 
 data class Produto(
     val nome: String,
@@ -6,4 +8,6 @@ data class Produto(
     val imagem: String,
     val preco: Double,
     val categoria: String,
-)
+) : Serializable {
+    fun toUi() = this
+}

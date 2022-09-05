@@ -1,4 +1,4 @@
-package br.com.filazero.ui.home.profile
+package br.com.filazero.presenter.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
